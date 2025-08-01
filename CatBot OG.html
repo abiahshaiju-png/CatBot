@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CatBot🐾</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #ffe4e1, #fffacd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #444;
+      margin-bottom: 10px;
+    }
+
+    .chatbox {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 500px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      max-height: 300px;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      padding: 10px;
+      margin: 5px 0;
+      border-radius: 10px;
+      max-width: 80%;
+      position: relative;
+    }
+
+    .user {
+      background-color: #d1ecf1;
+      align-self: flex-end;
+    }
+
+    .cat {
+      background-color: #f8d7da;
+      align-self: flex-start;
+    }
+
+    .typing {
+      font-style: italic;
+      color: #888;
+    }
+
+    input[type="text"] {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      width: calc(100% - 90px);
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px;
+      background-color: #ff69b4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+
+    button:hover {
+      background-color: #ff1493;
+    }
+
+    .input-area {
+      display: flex;
+      align-items: center;
+    }
+
+    .pet-button {
+      margin-top: 15px;
+      background-color: #ffd700;
+      color: #444;
+    }
+
+    .pet-button:hover {
+      background-color: #ffec8b;
+    }
+
+    /* Centered Animated Cat Styles */
+    .centered-cat-video {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+
+    .animated-cat {
+      width: 500px;
+      max-width: 90%;
+      height: auto;
+      animation: bounce 2s infinite ease-in-out;
+      cursor: pointer;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .animated-cat {
+        width: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🐾CatBot🐾</h1>
+  <div class="chatbox">
+    <div class="messages" id="chatMessages"></div>
+    <div class="input-area">
+      <input type="text" id="userInput" placeholder="Ask CatBot anything..." />
+      <button onclick="respondToUser()">Send</button>
+    </div>
+    <button class="pet-button" onclick="petTheCat()">🐾 Pet the Cat</button>
+  </div>
+
+  <!-- Centered Animated Cat Video -->
+ <center> <div class="centered-cat-video">
+    <video class="animated-cat" onclick="petTheCat()" autoplay loop muted preload="auto">
+      <source src="cutie.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</center>
+  <!-- Sound effects -->
+  <audio id="meowSound" src="meowing.mp3"></audio>
+  <audio id="purrSound" src="cat_purr.mp3"></audio>
+
+  <script>
+    const catSounds = [
+      "Meow 😺",
+      "Purr... 🐾",
+      "Hiss! 😾",
+      "Mrrrrrp! 🐈",
+      "Mew mew mew!",
+      "Nyaa~ ✨",
+      "Mrowww...",
+      "Prrrrrrrr...",
+      "Yowl!",
+      "Chirp!"
+    ];
+
+    function respondToUser() {
+      const input = document.getElementById("userInput");
+      const chat = document.getElementById("chatMessages");
+      const userText = input.value.trim();
+      if (!userText) return;
+
+      const userMsg = document.createElement("div");
+      userMsg.className = "message user";
+      userMsg.textContent = userText;
+      chat.appendChild(userMsg);
+
+      const typingMsg = document.createElement("div");
+      typingMsg.className = "message cat typing";
+      typingMsg.textContent = "CatBot is typing...";
+      chat.appendChild(typingMsg);
+      chat.scrollTop = chat.scrollHeight;
+
+      input.value = "";
+
+      setTimeout(() => {
+        typingMsg.remove();
+
+        const catMsg = document.createElement("div");
+        catMsg.className = "message cat";
+        const randomSound = catSounds[Math.floor(Math.random() * catSounds.length)];
+        catMsg.textContent = randomSound;
+        chat.appendChild(catMsg);
+
+        playCatSound(randomSound);
+        chat.scrollTop = chat.scrollHeight;
+      }, 1000);
+    }
+
+    function playCatSound(soundText) {
+      const meow = document.getElementById("meowSound");
+      const purr = document.getElementById("purrSound");
+      if (
+        soundText.includes("Meow") ||
+        soundText.includes("Mew mew mew") ||
+        soundText.includes("Mrowww") ||
+        soundText.includes("Chirp") ||
+        soundText.includes("Yowl") ||
+        soundText.includes("Hiss") ||
+        soundText.includes("Nyaa") ||
+        soundText.includes("Mrrrrrp")
+      ) {
+        meow.play();
+      } else if (soundText.includes("Purr") || soundText.includes("Prrrr")) {
+        purr.play();
+      }
+    }
+
+    function petTheCat() {
+      const chat = document.getElementById("chatMessages");
+      const catMsg = document.createElement("div");
+      catMsg.className = "message cat";
+      catMsg.textContent = "Prrrrrrr... CatBot loves you 🥰";
+      chat.appendChild(catMsg);
+
+      document.getElementById("purrSound").play();
+      chat.scrollTop = chat.scrollHeight;
+    }
+  </script>
+</body>
+</html>
