@@ -9,31 +9,23 @@
 
 
 ### Team Members
-- Team Lead: [Name] - [College]
-- Member 2: [Name] - [College]
-- Member 3: [Name] - [College]
+- Team Lead: [Abiah Shaiju] - [Mar Baselious Christian College of Engineering & Technology]
+- Member 2: [Acza Simon] - [Mar Baselious Christian College of Engineering & Technology]
 
 ### Project Description
-[2-3 lines about what your project does]
+[Our project is a chatbot where all the questions are answered by a cat with the 'meow' sound. It is like talking to a cat, a chatbot version of Talking Tom, Catbot]
 
 ### The Problem (that doesn't exist)
-[What ridiculous problem are you solving?]
+[who answers the questions asked in the chatbot.]
 
 ### The Solution (that nobody asked for)
-[How are you solving it? Keep it fun!]
+[The questions are answered by a cat sound whatever the question is.]
 
 ## Technical Details
 ### Technologies/Components Used
 For Software:
-- [Languages used]
-- [Frameworks used]
-- [Libraries used]
-- [Tools used]
-
-For Hardware:
-- [List main components]
-- [List specifications]
-- [List tools required]
+- [Html]
+- [CSS, Javascript]
 
 ### Implementation
 For Software:
@@ -47,50 +39,98 @@ For Software:
 For Software:
 
 # Screenshots (Add at least 3)
-![Screenshot1](Add screenshot 1 here with proper name)
+![Screenshot1]([Add screenshot 1 here with proper name](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing))
 *Add caption explaining what this shows*
 
-![Screenshot2](Add screenshot 2 here with proper name)
+![]([Add screenshot 2 here with proper name](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing))
 *Add caption explaining what this shows*
 
-![Screenshot3](Add screenshot 3 here with proper name)
+![Screenshot3]([Add screenshot 3 here with proper name](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing))
 *Add caption explaining what this shows*
 
 # Diagrams
-![Workflow](Add your workflow/architecture diagram here)
+![Start
+  |
+  v
+[Page Load - Display CatBot UI]
+  |
+  v
+[User types message]
+  |
+  v
+[User sends message (click Send or press Enter)?] ---> No ---> [Wait for user input]
+  |
+ Yes
+  |
+  v
+[Display user message in chat]
+  |
+  v
+[Show "CatBot is typing..." message]
+  |
+  v
+[Delay 1 second]
+  |
+  v
+[Remove typing message]
+  |
+  v
+[Select random cat phrase]
+  |
+  v
+[Display CatBot message in chat]
+  |
+  v
+[Play corresponding cat sound]
+  |
+  v
+[Scroll chat to bottom]
+  |
+  v
+[User clicks "Pet the Cat" button or animated cat?] ---> No ---> [Wait for user input]
+  |
+ Yes
+  |
+  v
+[Display "Prrrrrr... CatBot loves you 🥰" message]
+  |
+  v
+[Play purr sound]
+  |
+  v
+[Scroll chat to bottom]
+  |
+  v
+[Wait for next input]
+  |
+  └───────────────┐
+                  |
+                  v
+               (loops back to waiting for input)
+](Add your workflow/architecture diagram here)
 *Add caption explaining your workflow*
 
-For Hardware:
-
-# Schematic & Circuit
-![Circuit](Add your circuit diagram here)
-*Add caption explaining connections*
-
-![Schematic](Add your schematic diagram here)
-*Add caption explaining the schematic*
-
 # Build Photos
-![Components](Add photo of your components here)
+![Components](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing)
 *List out all components shown*
 
-![Build](Add photos of build process here)
+![Build]([Add photos of build process here](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing))
 *Explain the build steps*
 
-![Final](Add photo of final product here)
+![Final]([Add photo of final product here](https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing))
 *Explain the final build*
 
 ### Project Demo
 # Video
-[Add your demo video link here]
+(https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing)
 *Explain what the video demonstrates*
 
 # Additional Demos
 [Add any extra demo materials/links]
 
 ## Team Contributions
-- [Name 1]: [Specific contributions]
-- [Name 2]: [Specific contributions]
-- [Name 3]: [Specific contributions]
+- [Abiah Shaiju]: [Codes and implementation]
+- [Acza Simon]: [Code Correction]
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
