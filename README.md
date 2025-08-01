@@ -122,7 +122,7 @@ For Software:
 
 ### Project Demo
 # Video
-(https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing)
+( https://drive.google.com/file/d/1kHR2cSDJpKpXpLbtPIC-Ap1GaESHGkde/view?usp=sharing )
 *Explain what the video demonstrates*
 
 # Additional Demos
