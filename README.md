@@ -27,14 +27,6 @@ For Software:
 - [Html]
 - [CSS, Javascript]
 
-### Implementation
-For Software:
-# Installation
-[commands]
-
-# Run
-[commands]
-
 ### Project Documentation
 For Software:
 
